@@ -1,2 +1,5 @@
-<input type="text" placeholder="Ingrese el texto aqui">
-<p><fa-icon class="exclamation-icon" [icon]="faCircleExclamation"></fa-icon>Solo letras minúsculas y sin acentos</p>
+<div class="input-box">
+  <textarea class="input" type="text" placeholder="Ingrese el texto aqui" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+  <!-- <input class="input" type="text" placeholder="Ingrese el texto aqui"> -->
+  <p class="under-box-text"><fa-icon class="exclamation-icon" [icon]="faCircleExclamation"></fa-icon>Solo letras minúsculas y sin acentos</p>
+</div>
