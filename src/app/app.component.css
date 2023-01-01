@@ -1,10 +1,28 @@
-.main {
-  /* background: #D8DFE8; */
+:host {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
-.left-column {
+/* .left-column {
   display: flex;
   flex-direction: column;
+  width: 100%;
+} */
+.buttons-box {
+  width: 90%;
+}
+.right-column {
+  /* width: 90%; */
+  /* box-sizing: border-box; */
+
+}
+@media (min-width: 570px) {
+  .buttons-box {
+    width: 90%;
+    /* align-items: center; */
+  }
+  .right-column {
+    box-sizing: border-box;
+    width: 90%;
+  }
 }

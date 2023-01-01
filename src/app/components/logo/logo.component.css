@@ -1,3 +1,8 @@
 .alura-logo {
   margin: 24px auto auto 16px;
 }
+@media (min-width: 570px) {
+  .alura-logo {
+    margin: 40px auto auto 5%;
+  }
+}

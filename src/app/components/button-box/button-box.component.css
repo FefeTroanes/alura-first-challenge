@@ -1,4 +1,4 @@
-.buttons-box {
+:host {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -6,7 +6,6 @@
   margin: 16px auto;
 }
 button {
-  width: 328px;
   height: 67px;
   border: 1px solid #0A3871;
   border-radius: 24px;
@@ -23,4 +22,10 @@ button:first-child {
 button:last-child {
 	background: #F3F5FC;
   color: #0A3871;
+}
+@media (min-width: 570px) {
+  :host {
+    flex-direction: row;
+    width: 100%;
+  }
 }
