@@ -11,11 +11,6 @@
 .buttons-box {
   width: 90%;
 }
-.right-column {
-  /* width: 90%; */
-  /* box-sizing: border-box; */
-
-}
 @media (min-width: 570px) {
   .buttons-box {
     width: 90%;
@@ -24,5 +19,18 @@
   .right-column {
     box-sizing: border-box;
     width: 90%;
+  }
+}
+@media (min-width: 1024px) {
+  :host {
+    flex-direction: row;
+    width: 95%;
+    height: 100%;
+  }
+  .left-column {
+    width: 70%;
+  }
+  .right-column {
+    width: 30%;
   }
 }

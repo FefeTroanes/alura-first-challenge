@@ -8,6 +8,8 @@ import { OutputBoxComponent } from './components/output-box/output-box.component
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ButtonBoxComponent } from './components/button-box/button-box.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +20,7 @@ import { ButtonBoxComponent } from './components/button-box/button-box.component
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     FontAwesomeModule
   ],
   providers: [],

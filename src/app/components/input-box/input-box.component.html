@@ -1,5 +1,22 @@
-<div class="input-box">
-  <textarea class="input" type="text" placeholder="Ingrese el texto aqui" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+<!-- <div class="input-box"> -->
+  <form [formGroup]="inputForm">
+    <textarea
+      formControlName="inputedText"
+      class="input"
+      type="text"
+      placeholder="Ingrese el texto aqui"
+      onInput="this.parentNode.dataset.replicatedValue = this.value"
+      (ngModelChange)="inputForm"
+    >
+    </textarea>
+  <div *ngIf="inputedText?.errors?.['pattern']">
+    <p>La re cagaste</p>
+  </div>
+</form>
   <!-- <input class="input" type="text" placeholder="Ingrese el texto aqui"> -->
-  <p class="under-box-text"><fa-icon class="exclamation-icon" [icon]="faCircleExclamation"></fa-icon>Solo letras minúsculas y sin acentos</p>
-</div>
+  <p class="under-box-text">
+    <fa-icon class="exclamation-icon" [icon]="faCircleExclamation"></fa-icon>
+    Solo letras minúsculas y sin acentos
+  </p>
+  <p>{{ this.encryptorService.textToEncrypt | json }}</p>
+<!-- </div> -->

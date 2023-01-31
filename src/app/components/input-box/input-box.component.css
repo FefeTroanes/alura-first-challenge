@@ -1,4 +1,11 @@
-.input-box {
+/* .input-box {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 16px auto;
+  gap: 64px;
+} */
+:host {
   display: flex;
   flex-direction: column;
   width: 90%;
