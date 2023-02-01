@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EncryptorService } from 'src/app/services/encryptor.service';
 
 @Component({
   selector: 'app-output-box',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./output-box.component.css']
 })
 export class OutputBoxComponent {
-
+  constructor(public encryptorService: EncryptorService) {}
 }

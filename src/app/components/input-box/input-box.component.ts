@@ -27,7 +27,7 @@ export class InputBoxComponent implements OnInit {
     // Valido que el input solo sea de letras minusculas y sin acentos
     this.inputForm = this.formBuilder.group(
       {
-        inputedText: ['', Validators.pattern('[a-z]*')]
+        inputedText: ['', Validators.pattern('[a-z+ñ+ +.+,+-+_+¿+?+¡+!+]*')]
       }
     )
 

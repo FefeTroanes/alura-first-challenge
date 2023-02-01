@@ -8,3 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'aluraFirstChallenge';
 }
+
+// TODO: Funcionar solo con letras minusculas
+// TODO: Desencriptar
+// TODO: Boton que copie el output
+// TODO: Hacerlo con servicios
+

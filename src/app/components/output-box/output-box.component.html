@@ -1,5 +1,8 @@
-<!-- <div class="output-box"> -->
-  <!-- <img src="../assets/empty-message.svg" alt="asdasd"> -->
+<ng-container *ngIf="encryptorService.encryptedString; else noMessageFound">
+  <p class="output-text">{{ this.encryptorService.encryptedString }}</p>
+</ng-container>
+<ng-template #noMessageFound>
+  <img src="../assets/empty-message.svg" alt="asdasd">
   <h2>Ningún mensaje fue encontrado</h2>
-  <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-<!-- </div> -->
+  <p class="no-message-text2">Ingresa el texto que desees encriptar o desencriptar.</p>
+</ng-template>
