@@ -33,9 +33,15 @@ export class InputBoxComponent implements OnInit {
 
     // Mando el valor del inputedText al textToEncrypt del servicio (STRING)
     this.inputForm.valueChanges.subscribe((data) => {
+      // variable normal
       this.encryptorService.textToEncrypt = data.inputedText;
-      console.log('data: ', data);
+      // con observable
+      this.encryptorService.setTextToEncrypt(data.inputedText);
+      //esto no se borra
       this.encryptorService.itsAnEncryptedText();
+      // esto se puede borrar
+      console.log('data: ', data);
+
     })
   }
 

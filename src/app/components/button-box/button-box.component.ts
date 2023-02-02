@@ -16,14 +16,14 @@ export class ButtonBoxComponent implements OnInit {
         //     this.encryptorService.textToEncrypt = data;
         //   }
         // );
-      }
-      
+      // }
+
       // La letra "a" es convertida para "ai"
       // La letra "e" es convertida para "enter"
       // La letra "i" es convertida para "imes"
       // La letra "o" es convertida para "ober"
       // La letra "u" es convertida para "ufat"
-      
+
   // recorrerElString() {
   //   let textToEncrypt = this.encryptorService.textToEncrypt;
   //   let encryptedString: string = '';
@@ -56,5 +56,5 @@ export class ButtonBoxComponent implements OnInit {
   //   // return console.log('texto encriptado ', encryptedString);
   //   // return console.log('string ', cantidad);
   //   return encryptedString;
-  // }
+  }
 }
