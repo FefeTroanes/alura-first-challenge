@@ -14,14 +14,17 @@ button {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-}
-button:first-child {
   background: #0A3871;
   color: white;
 }
-button:last-child {
+
+/* .abled-button {
+} */
+button:disabled {
 	background: #F3F5FC;
-  color: #0A3871;
+  color: #C1C1C3;
+  border: 1px solid #C1C1C3;
+
 }
 @media (min-width: 570px) {
   :host {

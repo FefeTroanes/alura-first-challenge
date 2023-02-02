@@ -1,5 +1,16 @@
 <!-- <div class="buttons-box"> -->
-  <button>Encriptar</button>
-  <button>Desencriptar</button>
-  <button (click)="this.encryptorService.encrypt()">Consologuear</button>
+  <button
+  (click)="this.encryptorService.encrypt()"
+  [disabled]="this.encryptorService.itsEncrypted"
+  [ngClass]="this.encryptorService.itsEncrypted ? 'disabled-button' : 'abled-button'"
+  >
+    Encriptar
+  </button>
+  <button
+  (click)="this.encryptorService.encrypt()"
+  [ngClass]="this.encryptorService.itsEncrypted ? 'disabled-button' : 'abled-button'" [disabled]="!this.encryptorService.itsEncrypted">Desencriptar</button>
+  <button>Consologuear</button>
 <!-- </div> -->
+<!-- [ngClass]="step == 'step1' ? 'my_class1' : 'my_class2'" -->
+
+<!-- asdenter -->

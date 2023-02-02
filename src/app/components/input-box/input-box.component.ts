@@ -35,6 +35,7 @@ export class InputBoxComponent implements OnInit {
     this.inputForm.valueChanges.subscribe((data) => {
       this.encryptorService.textToEncrypt = data.inputedText;
       console.log('data: ', data);
+      this.encryptorService.itsAnEncryptedText();
     })
   }
 

@@ -13,4 +13,5 @@ export class AppComponent {
 // TODO: Desencriptar
 // TODO: Boton que copie el output
 // TODO: Hacerlo con servicios
-
+// TODO: "Modularizar" funcion para encriptar
+// TODO: Footer con mis datos
