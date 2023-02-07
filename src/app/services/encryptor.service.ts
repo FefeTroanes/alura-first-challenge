@@ -11,9 +11,9 @@ export class EncryptorService {
   // textToEncrypt$?: Observable<string>;
 
   // Variables normales
-  textToEncrypt: string = '';
-  encryptedString: string = '';
-  itsEncrypted: boolean = false;
+  // textToEncrypt: string = '';
+  // encryptedString: string = '';
+  // itsEncrypted: boolean = false;
 
   // Variables OBSERVABLES
   textToEncrypt$ = new BehaviorSubject<string>('');
@@ -42,120 +42,153 @@ export class EncryptorService {
     this.itsEncrypted$.next(value);
   }
 
+  itsAnEncryptedText() {
+    let valor: string = '';
+    this.textToEncrypt$.subscribe(data => {
+      return valor = data;
+    })
+    console.log('VALOR: ', valor);
+    if (
+      valor.includes('ai') ||
+      valor.includes('enter') ||
+      valor.includes('imes') ||
+      valor.includes('ober') ||
+      valor.includes('ufat')) {
+      return this.setItsEncrypted(true);
+    } else {
+      return this.setItsEncrypted(false);
+    }
+  }
+
   encrypt() {
     // Con variable normal
-    this.encryptedString = '';
-    let cantidad = this.textToEncrypt.length;
+    // this.encryptedString = '';
+    // let cantidad = this.textToEncrypt.length;
     // con observable
     this.setEncryptedString('');
-    let cantidadDeVerdad: number = 0;
+
+    let textToEncrypt: string = '';
+    let encryptedString: string = '';
+    let itsEncrypted: boolean = false;
+
+
+    let textToEncryptLength: number = 0;
     this.textToEncrypt$O.subscribe(data => {
-      return cantidadDeVerdad = data.length
+      textToEncrypt = data;
+      return textToEncryptLength = data.length
     });
-    console.log('anda? ', cantidadDeVerdad);
+    this.itsEncrypted$.subscribe(value => {
+      itsEncrypted = value
+    })
+    // console.log('itsEncrypted? ', this.itsEncrypted);
     // console.log('que mierda es esto: ', cantidad$?.source?.value);
     // let cantidadLength = cantidad$;
 
     // Con OBSERVABLES
-    if (cantidadDeVerdad > 0) {
-      if (this.itsEncrypted$0) {
-        for (let i = 0; i < cantidadDeVerdad; i++) {
-          switch (this.textToEncrypt[i]) {
+
+    console.log('KESESO ', this.itsEncrypted$0);
+
+    if (textToEncryptLength > 0) {
+      if (itsEncrypted) {
+        for (let i = 0; i < textToEncryptLength; i++) {
+          switch (textToEncrypt[i]) {
             case 'a':
-              if (this.textToEncrypt[i + 1] == 'i') {
-                this.encryptedString += 'a';
+              if (textToEncrypt[i + 1] == 'i') {
+                encryptedString += 'a';
                 i += 1;
                 break;
               } else {
-                this.encryptedString += 'a';
+                encryptedString += 'a';
                 break;
               }
             case 'e':
               if (
-                this.textToEncrypt[i + 1] == 'n' &&
-                this.textToEncrypt[i + 2] == 't' &&
-                this.textToEncrypt[i + 3] == 'e' &&
-                this.textToEncrypt[i + 4] == 'r'
+                textToEncrypt[i + 1] == 'n' &&
+                textToEncrypt[i + 2] == 't' &&
+                textToEncrypt[i + 3] == 'e' &&
+                textToEncrypt[i + 4] == 'r'
               ) {
-                this.encryptedString += 'e';
+                encryptedString += 'e';
                 i += 4;
                 break;
               } else {
-                this.encryptedString += 'e';
+                encryptedString += 'e';
                 break;
               }
             case 'i':
               if (
-                this.textToEncrypt[i + 1] == 'm' &&
-                this.textToEncrypt[i + 2] == 'e' &&
-                this.textToEncrypt[i + 3] == 's'
+                textToEncrypt[i + 1] == 'm' &&
+                textToEncrypt[i + 2] == 'e' &&
+                textToEncrypt[i + 3] == 's'
               ) {
-                this.encryptedString += 'i';
+                encryptedString += 'i';
                 i += 3;
                 break;
               } else {
-                this.encryptedString += 'i';
+                encryptedString += 'i';
                 break;
               }
             case 'o':
               if (
-                this.textToEncrypt[i + 1] == 'b' &&
-                this.textToEncrypt[i + 2] == 'e' &&
-                this.textToEncrypt[i + 3] == 'r'
+                textToEncrypt[i + 1] == 'b' &&
+                textToEncrypt[i + 2] == 'e' &&
+                textToEncrypt[i + 3] == 'r'
               ) {
-                this.encryptedString += 'o';
+                encryptedString += 'o';
                 i += 3;
                 break;
               } else {
-                this.encryptedString += 'o';
+                encryptedString += 'o';
                 break;
               }
             case 'u':
               if (
-                this.textToEncrypt[i + 1] == 'f' &&
-                this.textToEncrypt[i + 2] == 'a' &&
-                this.textToEncrypt[i + 3] == 't'
+                textToEncrypt[i + 1] == 'f' &&
+                textToEncrypt[i + 2] == 'a' &&
+                textToEncrypt[i + 3] == 't'
               ) {
-                this.encryptedString += 'u';
+                encryptedString += 'u';
                 i += 3;
                 break;
               } else {
-                this.encryptedString += 'u';
+                encryptedString += 'u';
                 break;
               }
             default:
-              this.encryptedString += this.textToEncrypt[i];
+              encryptedString += textToEncrypt[i];
               break;
           }
-          console.log(this.textToEncrypt[i]);
+          // console.log(this.textToEncrypt[i]);
         }
+
       } else {
-        for (let i = 0; i < cantidad; i++) {
-          switch (this.textToEncrypt[i]) {
+        for (let i = 0; i < textToEncryptLength; i++) {
+          switch (textToEncrypt[i]) {
             case 'a':
-              this.encryptedString += 'ai';
+              encryptedString += 'ai';
               break;
             case 'e':
-              this.encryptedString += 'enter';
+              encryptedString += 'enter';
               break;
             case 'i':
-              this.encryptedString += 'imes';
+              encryptedString += 'imes';
               break;
             case 'o':
-              this.encryptedString += 'ober';
+              encryptedString += 'ober';
               break;
             case 'u':
-              this.encryptedString += 'ufat';
+              encryptedString += 'ufat';
               break;
             default:
-              this.encryptedString += this.textToEncrypt[i];
+              encryptedString += textToEncrypt[i];
               break;
           }
-          console.log(this.textToEncrypt[i]);
+          console.log(textToEncrypt[i]);
         }
       }
     }
-    return console.log('texto encriptado ', this.encryptedString);
+    console.log('texto encriptado ', encryptedString);
+    return this.setEncryptedString(encryptedString);
   }
 
     // Con variables normales
@@ -258,25 +291,9 @@ export class EncryptorService {
     //   }
     // }
     // return console.log('texto encriptado ', this.encryptedString);
+
   // }
 
-  itsAnEncryptedText() {
-    let valor: string = '';
-    this.textToEncrypt$.subscribe(data => {
-      return valor = data;
-    })
-    console.log('VALOR: ', valor);
-    if (
-      valor.includes('ai') ||
-      valor.includes('enter') ||
-      valor.includes('imes') ||
-      valor.includes('ober') ||
-      valor.includes('ufat')) {
-      return this.setItsEncrypted(true);
-    } else {
-      return this.setItsEncrypted(false);
-    }
-  }
 
   // decrypt() {
   //   this.setTextToEncrypt(this.textToEncrypt)

@@ -1,5 +1,5 @@
-<ng-container *ngIf="encryptorService.encryptedString; else noMessageFound">
-  <p class="output-text">{{ this.encryptorService.encryptedString }}</p>
+<ng-container *ngIf="encryptorService.encryptedString$.value; else noMessageFound">
+  <p class="output-text">{{ this.encryptorService.encryptedString$.value }}</p>
 </ng-container>
 <ng-template #noMessageFound>
   <img src="../assets/empty-message.svg" alt="asdasd">
