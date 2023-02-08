@@ -1,19 +1,19 @@
 <!-- <div class="buttons-box"> -->
   <button
   (click)="this.encryptorService.encrypt()"
-  [disabled]="this.encryptorService.itsEncrypted$.value"
+  [disabled]="this.encryptorService.itsEncrypted$.value || this.encryptorService.disableButtons$.value"
   [ngClass]="this.encryptorService.itsEncrypted$.value ? 'disabled-button' : 'abled-button'"
   >
     Encriptar
   </button>
   <button
   (click)="this.encryptorService.encrypt()"
-  [disabled]="!this.encryptorService.itsEncrypted$.value"
+  [disabled]="!this.encryptorService.itsEncrypted$.value ||  this.encryptorService.disableButtons$.value"
   [ngClass]="this.encryptorService.itsEncrypted$.value ? 'disabled-button' : 'abled-button'"
   >
     Desencriptar
   </button>
-  <button>Consologuear</button>
+  <!-- <button>Consologuear</button> -->
 <!-- </div> -->
 <!-- [ngClass]="step == 'step1' ? 'my_class1' : 'my_class2'" -->
 

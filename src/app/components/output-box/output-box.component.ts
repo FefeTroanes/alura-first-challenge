@@ -8,4 +8,10 @@ import { EncryptorService } from 'src/app/services/encryptor.service';
 })
 export class OutputBoxComponent {
   constructor(public encryptorService: EncryptorService) {}
+
+  copiar() {
+    console.log('puto el que lee')
+    navigator.clipboard.writeText(this.encryptorService.encryptedString$.value);
+    alert('texto copiado');
+  }
 }

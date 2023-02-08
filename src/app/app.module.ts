@@ -8,7 +8,9 @@ import { OutputBoxComponent } from './components/output-box/output-box.component
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ButtonBoxComponent } from './components/button-box/button-box.component';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
+import { ButtonComponent } from './components/button/button.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
     LogoComponent,
     InputBoxComponent,
     OutputBoxComponent,
-    ButtonBoxComponent
+    ButtonBoxComponent,
+    FooterComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

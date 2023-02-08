@@ -1,5 +1,6 @@
 <ng-container *ngIf="encryptorService.encryptedString$.value; else noMessageFound">
   <p class="output-text">{{ this.encryptorService.encryptedString$.value }}</p>
+  <app-button [buttonText]="'Copiar'" (click)="copiar()"></app-button>
 </ng-container>
 <ng-template #noMessageFound>
   <img src="../assets/empty-message.svg" alt="asdasd">

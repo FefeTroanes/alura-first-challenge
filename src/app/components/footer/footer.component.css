@@ -1,0 +1,27 @@
+/* :host{
+  background: #0A3871;
+} */
+.footer {
+  background: #0A3871;
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-text, .brands-section {
+  text-align: center;
+  font-size: larger;
+  color: #F3F5FC;
+}
+.brands-section {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.angular-icon {
+  color: darkred;
+}
+.footer-text:visited, .brand-icon:visited {
+  color: #F3F5FC;
+}
+

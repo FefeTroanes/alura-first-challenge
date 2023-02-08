@@ -10,8 +10,4 @@ export class AppComponent {
 }
 
 // TODO: Funcionar solo con letras minusculas
-// TODO: Desencriptar
-// TODO: Boton que copie el output
-// TODO: Hacerlo con servicios
-// TODO: "Modularizar" funcion para encriptar
-// TODO: Footer con mis datos
+// TODO: Modales de alerta

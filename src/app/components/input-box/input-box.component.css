@@ -11,6 +11,7 @@
   width: 90%;
   margin: 16px auto;
   gap: 64px;
+  /* height: 100%; */
 }
 .input {
   width: 100%;
@@ -35,4 +36,10 @@
   font-size: 12px;
   line-height: 150%;
   color: #495057;
+}
+@media (min-width: 1024px) {
+  .input {
+    height: 600px;
+    resize: none;
+  }
 }

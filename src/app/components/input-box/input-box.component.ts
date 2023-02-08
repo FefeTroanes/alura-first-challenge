@@ -18,7 +18,6 @@ export class InputBoxComponent implements OnInit {
 
 
   constructor(
-    //TODO: CAMBIAR EL PUBLIC DE ABAJO POR PRIVATE
     public encryptorService: EncryptorService,
     private formBuilder: FormBuilder
   ) {}
@@ -40,7 +39,11 @@ export class InputBoxComponent implements OnInit {
       //esto no se borra
       this.encryptorService.itsAnEncryptedText();
       // esto se puede borrar
+      console.log('error ', data)
       // console.log('data: ', data.inputedText);
+      if (data.inputedText.errors) {
+        this.encryptorService.setDisableButtons(true);
+      }
     })
   }
 

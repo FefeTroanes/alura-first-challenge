@@ -19,6 +19,7 @@ export class EncryptorService {
   textToEncrypt$ = new BehaviorSubject<string>('');
   encryptedString$ = new BehaviorSubject<string>('');
   itsEncrypted$ = new BehaviorSubject<boolean>(false);
+  disableButtons$ = new BehaviorSubject<boolean>(false);
 
   // GETTERS
   get textToEncrypt$O() {
@@ -40,6 +41,9 @@ export class EncryptorService {
   }
   setItsEncrypted(value: boolean) {
     this.itsEncrypted$.next(value);
+  }
+  setDisableButtons(value: boolean) {
+    this.disableButtons$.next(value);
   }
 
   itsAnEncryptedText() {
