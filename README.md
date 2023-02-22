@@ -10,12 +10,13 @@
 * TypeScript
 * Generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 ## Getting started
 
 To see the app working click [here](https://fefetroanes.github.io/alura-first-challenge/)
+
+[This](https://www.figma.com/file/trP3p5nEh7XUyB3n2bomjP/Alura-Challenge---Desaf%C3%ADo-1---L%C3%B3gica?node-id=0%3A1) was the proposed Figma model, with desktop and mobile screen layouts.
 
 This application is an encryptor proposed as a challenge in the alura + oracle course.
 We were asked to make it with html, css and js but I decided to make it with angular since I'm starting to learn this framework and I took the opportunity to practice a bit.
@@ -43,3 +44,4 @@ The page must have fields for inserting the text to be encrypted or decrypted, t
 - A button that copies the encrypted/decrypted text for the transfer section, i.e. has the same functionality as ctrl+C or the "copy" option in the applications menu.
 
 (It still needs a couple of minor bug fixes but I'm currently working on other things.)
+<p align="right">(<a href="#top">back to top</a>)</p>
