@@ -22,20 +22,19 @@ We were asked to make it with html, css and js but I decided to make it with ang
 
 ## About the encryptor
 
-The encryption is based on replacing the vowels of the entered text with the following text strings:
-- `The letter "e" is converted to "enter".`
-- `The letter "i" is converted to "imes".`
-- `The letter "a" is converted to "ai".`
-- `The letter "o" is converted to "ober".`
-- `The letter "u" is converted for "ufat".`
+- The encryption is based on replacing the vowels of the entered text with the following text strings:
+  - `The letter "e" is converted to "enter".`
+  - `The letter "i" is converted to "imes".`
+  - `The letter "a" is converted to "ai".`
+  - `The letter "o" is converted to "ober".`
+  - `The letter "u" is converted for "ufat".`
+- It should work only with lowercase letters.<br>
+- Letters with accents or special characters should not be used.<br>
+- If encrypted text is entered it should return the decrypted version of the text.
 
-It should work only with lowercase letters.<br>
-Letters with accents or special characters should not be used.<br>
-If encrypted text is entered it should return the decrypted version of the text.
-
-For example:
-"gato" => "gaitober".
-gaitober" => "gato".
+### For example:
+`"gato" => "gaitober"`<br>
+`gaitober" => "gato".`
 
 The page must have fields for inserting the text to be encrypted or decrypted, the buttons for encrypting or decrypting are enabled/disabled depending on whether what is entered is already encrypted or not.
 
