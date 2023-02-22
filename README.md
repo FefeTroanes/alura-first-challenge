@@ -29,8 +29,8 @@ The encryption is based on replacing the vowels of the entered text with the fol
 - `The letter "o" is converted to "ober".`
 - `The letter "u" is converted for "ufat".`
 
-It should work only with lowercase letters.
-Letters with accents or special characters should not be used.
+It should work only with lowercase letters.<br>
+Letters with accents or special characters should not be used.<br>
 If encrypted text is entered it should return the decrypted version of the text.
 
 For example:
