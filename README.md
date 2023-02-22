@@ -1,27 +1,46 @@
-# AluraFirstChallenge
+  # Alura First Challenge: Encryptor
+<img src="https://www.aluracursos.com/assets/img/home/alura-logo.1647533644.svg">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+<br><br><br>
 
-## Development server
+## Built with
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* HTML
+* CSS
+* TypeScript
+* Generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
-## Code scaffolding
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Getting started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To see the app working click [here](https://fefetroanes.github.io/alura-first-challenge/)
 
-## Running unit tests
+This application is an encryptor proposed as a challenge in the alura + oracle course.
+We were asked to make it with html, css and js but I decided to make it with angular since I'm starting to learn this framework and I took the opportunity to practice a bit.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## About the encryptor
 
-## Running end-to-end tests
+The encryption is based on replacing the vowels of the entered text with the following text strings:
+- `The letter "e" is converted to "enter".`
+- `The letter "i" is converted to "imes".`
+- `The letter "a" is converted to "ai".`
+- `The letter "o" is converted to "ober".`
+- `The letter "u" is converted for "ufat".`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+It should work only with lowercase letters.
+Letters with accents or special characters should not be used.
+If encrypted text is entered it should return the decrypted version of the text.
 
-## Further help
+For example:
+"gato" => "gaitober".
+gaitober" => "gato".
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The page must have fields for inserting the text to be encrypted or decrypted, the buttons for encrypting or decrypting are enabled/disabled depending on whether what is entered is already encrypted or not.
+
+### Extras:
+
+- A button that copies the encrypted/decrypted text for the transfer section, i.e. has the same functionality as ctrl+C or the "copy" option in the applications menu.
+
+(It still needs a couple of minor bug fixes but I'm currently working on other things.)
